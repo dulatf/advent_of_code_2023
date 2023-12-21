@@ -7,15 +7,7 @@
 #include <tuple>
 #include <vector>
 
-std::vector<std::string> read_input(std::string path) {
-  std::ifstream infile(path);
-  std::vector<std::string> lines;
-  std::string line;
-  while (std::getline(infile, line)) {
-    lines.push_back(line);
-  }
-  return lines;
-}
+#include "util.h"
 
 std::vector<int> numbers(std::string line) {
   std::vector<char> num_chars;
