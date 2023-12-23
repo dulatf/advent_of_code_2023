@@ -12,7 +12,9 @@ std::vector<std::string> split(const std::string &s, char delim) {
   std::istringstream token_stream(s);
   std::string token;
   while (std::getline(token_stream, token, delim)) {
-    tokens.push_back(token);
+    if (!token.empty()) {
+      tokens.push_back(token);
+    }
   }
   return tokens;
 }
